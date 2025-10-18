@@ -18,22 +18,22 @@ function Taskform({addTask}) {
             <form onSubmit={handleSubmit}>
                 <div>
                     <input type="text" value={task} placeholder="Enter the task"  onChange={(e)=> setTask(e.target.value)} />
-                    <button  type="submit"> Add Task</button>
-                    <h1>{task} {priority} {category}</h1>
-                </div>
+                    
+                    {/* <h1>{task} {priority} {category}</h1> */}
+                
                 <div>
                     <select value= {priority} onChange={(e) => setPriority(e.target.value)}>
                         <option value="medium">Medium</option>
                         <option value="high">High</option>
                         <option value="low">Low</option>
                     </select>
-
-
                     <select value = {category} onChange={(e)=>setCategory(e.target.value)}>
                         <option value="general">General</option>
                         <option value="work">Work</option>
                         <option value="personal">Personal</option>
                     </select>
+                    <button  type="submit"> Add Task</button>
+                </div>
                 </div>
             </form>
         </div>
